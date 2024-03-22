@@ -14,6 +14,7 @@ def intro():
     print("Welcome to the Date Diffence App.")
     print("This App will Tell you the Date Difference between any Two Dates you want to know")
     print("Enter the letter q to quit")
+
 def get_date():
     invalid_date = True
     while invalid_date:

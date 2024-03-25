@@ -36,7 +36,6 @@ def partition(array, low, high):
             (array[i], array[j]) = (array[j], array[i])
 
     (array[i + 1], array[high]) = (array[high], array[i + 1])
-    print(array)
     return i + 1
 
 

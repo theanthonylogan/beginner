@@ -5,7 +5,7 @@ def main():
 def intro():
     print("Hello and welcome to sorter!")
     print(
-        "Enter a common seperated list of letters and numbers and we will sort it for you :)"
+        "Enter a common seperated list of numbers and we will sort it for you :)"
     )
     data = get_list()
     sorted_data = quick_sort(data, 0, len(data)-1)

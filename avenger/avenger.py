@@ -10,6 +10,7 @@ def intro():
     print("Enter 'q' to quit at anytime")
     quiz()
 
+
 def quiz():
     questions = [
         {

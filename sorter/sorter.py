@@ -4,11 +4,9 @@ def main():
 
 def intro():
     print("Hello and welcome to sorter!")
-    print(
-        "Enter a common seperated list of numbers and we will sort it for you :)"
-    )
+    print("Enter a common seperated list of numbers and we will sort it for you :)")
     data = get_list()
-    sorted_data = quick_sort(data, 0, len(data)-1)
+    sorted_data = quick_sort(data, 0, len(data) - 1)
     print(f"Here is the sorted list: {sorted_data}")
 
 
@@ -45,6 +43,7 @@ def quick_sort(array, low, high):
         quick_sort(array, low, pi - 1)
         quick_sort(array, pi + 1, high)
     return array
+
 
 if __name__ == "__main__":
     main()

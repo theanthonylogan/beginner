@@ -1,5 +1,6 @@
 def main():
     intro()
+    quiz()
 
 
 def intro():
@@ -8,7 +9,6 @@ def intro():
         "We will analyze your personality and tell you which avenger you are most like"
     )
     print("Enter 'q' to quit at anytime")
-    quiz()
 
 
 def quiz():

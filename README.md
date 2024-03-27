@@ -13,4 +13,5 @@
 ### Project #4 - [Avenger Quiz](https://github.com/theanthonylogan/beginner/tree/main/avenger)
 - An avenger quiz to find out which avenger you are 
 
-
+### Project #5 - [Tic Tac Text Toe](https://github.com/theanthonylogan/beginner/tree/main/tictac)
+- A text based tic tac toe game

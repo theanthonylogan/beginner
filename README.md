@@ -18,3 +18,6 @@
 
 ### Project #6 - [Counter GUI App](https://github.com/theanthonylogan/beginner/tree/main/counter)
 - A GUI based counter app
+
+### Project #7 - [Converter](https://github.com/theanthonylogan/beginner/tree/main/converter)
+- An application to convert temperatures and measurements

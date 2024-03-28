@@ -15,3 +15,6 @@
 
 ### Project #5 - [Tic Tac Text Toe](https://github.com/theanthonylogan/beginner/tree/main/tictac)
 - A text based tic tac toe game
+
+### Project #6 - [Counter GUI App](https://github.com/theanthonylogan/beginner/tree/main/counter)
+- A GUI based counter app

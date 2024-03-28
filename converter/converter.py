@@ -10,50 +10,92 @@ def intro():
 
 def main_loop():
     input_data = ""
-    while input_data != 'q':
-        input_data = input("Select 't' for Temperature Converter or 'm' for Measurement Converter")
+    while input_data != "q":
+        input_data = input(
+            "Select 't' for Temperature Converter or 'm' for Measurement Converter: "
+        )
         select_converter(input_data)
 
 
 def select_converter(selection):
-    if selection == 't':
+    if selection == "t":
         temperature_converter()
-    elif selection == 'm':
+    elif selection == "m":
         measurement_converter()
+    elif selection != "q":
+        print(
+            "Please enter either 't' for Temperature Converter or 'm' for Measurement Converter"
+        )
+
+
+def measurement_converter():
+    measurement_number = get_user_input("measurement")
+    measurement_unit = get_user_input("measurement_unit")
+    measurement_unit_final = get_user_input("measurement_unit")
+
+    if measurement_unit == "ft":
+        measurement_final = measurement_number * 0.3048
     else:
-        print("Please enter either 't' for Temperature Converter or 'm' for Measurement Converter")
+        measurement_final = measurement_number / 0.3048
+
+    print(f"{measurement_final} {measurement_unit_final}")
+
 
 def temperature_converter():
-    while 'temperature_number' not in locals():
-        temperature = input("Please enter temperature: ")
 
-        try:
-            temperature_number = float(temperature)
-        except ValueError:
-            print("Enter a number, please.")
+    temperature_number = get_user_input("temperature")
+    temperature_unit = get_user_input("temperature_unit")
+    temperature_unit_final = get_user_input("temperature_unit")
 
-    temperature_unit = ''
-    while temperature_unit not in ['f','c','k']:
-        temperature_unit = input("Please enter temperature unit (f,c,k): ")
-
-        if temperature_unit not in ['f','c','k']:
-            print("Enter f,c, or k, please")
-    temperature_unit_final = ''
-    while temperature_unit_final not in ['f','c','k']:
-        temperature_unit_final = input("Please enter temperature unit (f,c,k): ")
-
-        if temperature_unit_final not in ['f','c','k']:
-            print("Enter f,c, or k, please")
-
-    if temperature_unit == 'f':
-        if temperature_unit_final == 'c':
-            temperature_final = (temperature_number - 32) * (5/9)
-        elif temperature_unit_final == 'k':
-            temperature_final = (temperature_number - 32) * (5/9) + 273.15
+    if temperature_unit == "f":
+        if temperature_unit_final == "c":
+            temperature_final = (temperature_number - 32) * (5 / 9)
+        elif temperature_unit_final == "k":
+            temperature_final = (temperature_number - 32) * (5 / 9) + 273.15
         else:
             temperature_final = temperature_number
 
     print(f"{temperature_final} {temperature_unit_final}")
+
+
+def get_user_input(input_type):
+    if input_type == "temperature" or input_type == "measurement":
+        while True:
+            user_input = input(f"Please enter {input_type} value: ")
+
+            if user_input.strip():
+                try:
+                    number_input = float(user_input)
+                    return number_input
+                except ValueError:
+                    print("Not a number value. Please try again.")
+            else:
+                print("Invalid input. Please try again.")
+
+    elif input_type == "temperature_unit":
+        while True:
+            user_input = input("Please enter temperature unit (f,c,k): ")
+            user_input = user_input.strip()
+            if user_input:
+                if user_input in ["f", "c", "k"]:
+                    return user_input
+                else:
+                    print("Not a valid unit. Please try again.")
+            else:
+                print("Invalid input. Please try again.")
+
+    elif input_type == "measurement_unit":
+        while True:
+            user_input = input("Please enter measurement unit (ft,m): ")
+            user_input = user_input.strip()
+            if user_input:
+                if user_input in ["ft", "m"]:
+                    return user_input
+                else:
+                    print("Not a valid unit. Please try again.")
+            else:
+                print("Invalid input. Please try again.")
+
 
 if __name__ == "__main__":
     main()

@@ -21,3 +21,6 @@
 
 ### Project #7 - [Converter](https://github.com/theanthonylogan/beginner/tree/main/converter)
 - An application to convert temperatures and measurements
+
+### Project #8 - [Number Adventure Game](https://github.com/theanthonylogan/beginner/tree/main/numbergame)
+- A choose a number adventure game
